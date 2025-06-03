@@ -1,10 +1,10 @@
+import Hero from "./sections/Hero.jsx";
+
 const App = () => {
     return (
-        <main>
-            <div>
-
-            </div>
-        </main>
+        <>
+            <Hero/>
+        </>
     )
 }
 export default App
