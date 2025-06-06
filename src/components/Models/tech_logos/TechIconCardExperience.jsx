@@ -3,18 +3,18 @@ import {Canvas} from "@react-three/fiber";
 import {useEffect} from "react";
 import * as THREE from 'three';
 
-const TechIcon = ({model}) => {
+const TechIconCardExperience = ({model}) => {
     const scene = useGLTF(model.modelPath);
 
     useEffect(() => {
         if (model.name === 'Interactive Developer') {
             scene.scene.traverse((child) => {
-                if (child.isMesh && child.name === 'Object_5') {
+                if (child["isMesh"] && child.name === 'Object_5') {
                     child.material = new THREE.MeshStandardMaterial({color: 'white'})
                 }
             })
         }
-    }, [scene])
+    }, [model.name, scene])
     return (
         <Canvas>
             <ambientLight intensity={0.3}/>
@@ -32,4 +32,4 @@ const TechIcon = ({model}) => {
         </Canvas>
     )
 }
-export default TechIcon
+export default TechIconCardExperience
