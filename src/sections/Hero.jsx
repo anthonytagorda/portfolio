@@ -5,6 +5,7 @@ import Button from "../components/Button.jsx";
 import HeroExperience from "../components/models/hero_models/HeroExperience.jsx";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
 import {words} from '../constants/index.js';
+import TitleHeader from "../components/TitleHeader.jsx";
 
 const Hero = () => {
     useGSAP(() => {
@@ -59,7 +60,7 @@ const Hero = () => {
                         <Button
                             className="md:w-80 md:h-16 w-60 h-12"
                             id="button"
-                            text="See my Work"
+                            text="See my projects"
                         />
                     </div>
                 </header>
