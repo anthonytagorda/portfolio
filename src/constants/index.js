@@ -243,18 +243,17 @@ const testimonials = [
 const socialImgs = [
     {
         name: "insta",
+        url: "https://www.instagram.com/a.shin.o/",
         imgPath: "/images/insta.png",
     },
     {
         name: "fb",
+        url: "https://www.facebook.com/anthony.tagorda/",
         imgPath: "/images/fb.png",
     },
     {
-        name: "x",
-        imgPath: "/images/x.png",
-    },
-    {
         name: "linkedin",
+        url: "https://www.linkedin.com/in/anthony-tagorda/",
         imgPath: "/images/linkedin.png",
     },
 ];
