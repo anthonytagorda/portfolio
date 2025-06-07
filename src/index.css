@@ -33,6 +33,7 @@ section {
     .flex-center {
         @apply flex justify-center items-center;
     }
+
     .flex-col-center {
         @apply flex flex-col justify-center items-center;
     }
@@ -86,11 +87,24 @@ section {
 
     .hero-text {
         @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
-        img {
-            @apply size-8 md:size-10 object-contain;
+
+        h1 {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
+
+        img {
+            @apply size-8 md:size-2 object-contain;
+        }
+
         .slide {
             @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+            left: 8.75rem;
+            @apply md:left-[16rem];
+            top: 0;
+            @apply md:top-[-2px];
         }
     }
 
@@ -386,6 +400,7 @@ section {
             rgba(255, 255, 255, 0) 100%
     );
 }
+
 .gradient-edge:nth-of-type(2) {
     right: 0;
     background: linear-gradient(
@@ -401,6 +416,7 @@ section {
     overflow: hidden;
     position: relative;
 }
+
 .marquee-box {
     display: flex;
     align-items: center;
@@ -410,9 +426,11 @@ section {
     overflow: hidden;
     animation: marquee 60s linear infinite;
 }
+
 .marquee-item {
     float: left;
 }
+
 @keyframes marquee {
     0% {
         left: 0;
@@ -421,6 +439,7 @@ section {
         left: -100%;
     }
 }
+
 /* marquee end */
 
 .card {
@@ -464,8 +483,6 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    filter: blur(10px);
-    filter: saturate(200);
 }
 
 .card:hover::before {

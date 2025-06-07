@@ -5,7 +5,8 @@ import Button from "../components/Button.jsx";
 import HeroExperience from "../components/models/hero_models/HeroExperience.jsx";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
 import {words} from '../constants/index.js';
-import TitleHeader from "../components/TitleHeader.jsx";
+import Socials from "./Socials.jsx";
+import ResumeButton from "../components/ResumeButton.jsx";
 
 const Hero = () => {
     useGSAP(() => {
@@ -33,35 +34,45 @@ const Hero = () => {
                 <header className="flex flex-col justify-center mid:w-full w-screen md:px-20 px-5">
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
-                            <h1>
-                                Shaping
+                            <h1 className="flex items-center gap-3 text-[25px] md:text-[55px]">
+                                <svg
+                                    className="w-6 h-6 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                    />
+                                </svg>
+                                Based in
                                 <span className="slide">
                                     <span className="wrapper">
                                         {words.map((word) => (
                                             <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
-                                                <img
-                                                    src={word.imgPath}
-                                                    alt={word.text}
-                                                    className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                                                />
-
                                                 <span>{word.text}</span>
                                             </span>
                                         ))}
                                     </span>
                                 </span>
                             </h1>
-                            <h1>into Real Projects</h1>
-                            <h1>that Deliver Results</h1>
                         </div>
+
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            Hi, I'm Anthony
+                            Software Engineer
                         </p>
-                        <Button
-                            className="md:w-80 md:h-16 w-60 h-12"
-                            id="button"
-                            text="See my projects"
-                        />
+                        <ResumeButton/>
+                        <Socials/>
                     </div>
                 </header>
                 {/*RIGHT: 3D Model */}
